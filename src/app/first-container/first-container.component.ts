@@ -18,5 +18,7 @@ export class FirstContainerComponent implements OnInit {
 
   
 
-  retrieveCityname = ($event: string) => this.cityName = $event
+  retrieveCityname = ($event: string) => {
+    this.cityName = $event
+  }
 }

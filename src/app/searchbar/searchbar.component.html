@@ -1,6 +1,10 @@
-<div class="search">
-    <form #form = "ngForm" (submit)="onSubmit()"> 
+<div class="search flex">
+    <form #form = "ngForm" (ngSubmit)="onSubmit()"> 
         <input type="text" placeholder="Search Cities" name="city" [(ngModel)]="cityName">
+
     </form>
+
+    <button type="submit" (click)="onSubmit()">Search</button>
     
+
 </div>
