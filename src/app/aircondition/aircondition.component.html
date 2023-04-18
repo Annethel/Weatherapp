@@ -1,0 +1,15 @@
+<div class="air">
+    <div class="condition">
+        <h3>AIR CONDITIONS</h3>
+        <button>See More</button>
+    </div>
+    <div class=" writings row ">
+        <div *ngFor="let item of airInfo" class="col-md-6">
+            <div class="toflex">  <fa-icon [icon]="item.icon"></fa-icon>
+                <p>{{item.word}}</p></div>
+          
+            <h3>{{item.num}}</h3>
+        </div>
+
+    </div>
+</div>

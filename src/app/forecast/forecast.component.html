@@ -1,0 +1,10 @@
+<div class="content row">
+     <h2>{{tittle}}</h2>
+     
+     <div class="details col-md-2" *ngFor="let item of contentDetails">
+        <p>{{item.time}}</p>
+        <img [src]= 'item.img' alt="Wheather img">
+        <h3>{{item.temp | number:'1.0-0'}}˚C</h3>
+
+     </div>
+</div>

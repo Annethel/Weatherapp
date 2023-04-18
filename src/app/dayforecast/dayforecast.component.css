@@ -1,0 +1,31 @@
+.maindiv{
+    background-color:#192841;
+    color: white;
+    min-width: 400px;
+    border-radius: 20px;
+    padding-top: 20px;
+    margin-top: 100px;
+    min-height: 600px;
+    
+
+}
+.maindiv h2{
+    padding-left: 20px;
+
+}
+
+img{
+    max-width: 50px;
+}
+h2{
+    font-size: 1vw;
+}
+.details {
+    border-bottom: 0.4px solid #ccd9ef;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}

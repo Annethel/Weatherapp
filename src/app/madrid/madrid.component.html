@@ -1,0 +1,14 @@
+
+<div class="all row">
+    <div class="names col-md-2">
+       <h1>{{weatherData?.address}}</h1>
+       <p>Chance of rain: {{percent}}%</p>
+       <h2>{{weatherData?.currentConditions?.temp| number: '1.0-0'}}˚C</h2>
+    </div>
+    <div class="img col-md-2">
+        <img [src]="imgurl" alt="sun" *ngIf="5<4">
+        <img [src]="weatherData?.currentConditions?.icon" alt="cloudy" *ngIf="1<4">
+        <img [src]="imgurl2" alt="rain" *ngIf="8<4">
+    </div>
+</div>
+

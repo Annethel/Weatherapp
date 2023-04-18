@@ -1,0 +1,58 @@
+.container{
+    border-bottom: solid #00a3ff;
+    padding-bottom: 80px;
+}
+.umbrella{
+    background-color: #192841;
+    border-radius: 10px;
+    height: 550px;
+    margin-top: 50px;
+    position: relative;
+    align-content: center;
+}
+.umbrella img{
+    max-width: 400px;
+    min-width: 200px;
+    margin-top: 70px;
+
+
+}
+.imgSmall img{
+   
+
+    max-width: 100px;
+}
+h1{
+    color: aliceblue;
+  font-weight: bold;
+  padding-top: 6vw;
+  font-size: 50px;
+}
+p{
+    color: #656b6f;
+    
+    font-size: 2vw;
+}
+button{
+    width: 140px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: #00a3ff;
+    border: 0;
+    color: white;
+    margin-top:70px;
+
+}
+
+
+
+/*media querries*/
+@media only screen and (max-width: 950px){
+    .umbrella{
+        width: 100%;
+    }
+    .breeze{
+        width: 100%;
+        padding-top: 100px;
+    }
+}

@@ -1,0 +1,16 @@
+<div class="container">
+    <app-sidebar></app-sidebar>
+    <div class="mfa">
+        <div class="search">
+            <app-searchbar (newCityEvent)="retrieveCityname($event)"></app-searchbar>
+        </div>
+        <div class="mabar"><app-madrid [item]="cityName"></app-madrid></div>
+
+        <div class="fore"><app-forecast></app-forecast></div>
+        <div class="air"> <app-aircondition></app-aircondition></div>
+
+    </div>
+
+    <app-dayforecast></app-dayforecast>
+
+</div>

@@ -1,0 +1,25 @@
+.all{
+    background-color: #000112;
+    max-width: 700px;
+    max-height: 400px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+
+    display: flex;
+}
+img{
+    max-width: 100px;
+    margin-left: 300px;
+}
+.names{
+    color: rgba(218, 221, 224, 0.852);
+    padding-left: 20px;
+    max-width: 100%;
+}
+.names p{
+    font-size: 0.6vw;
+    padding-bottom: 2vw;
+}

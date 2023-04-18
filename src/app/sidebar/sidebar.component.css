@@ -1,0 +1,32 @@
+.sidebar{
+    width: 100px;
+    background-color: #192841;
+    margin-top: 20px;
+    border-radius: 20px;
+    top: 0; 
+    left: 0;
+    overflow-x: hidden; 
+    padding-top: 20px;
+    z-index: 1;
+    min-height: 763px;
+    
+
+}
+.sidebar img{
+    max-width: 50px;
+    padding-top: 20px;
+    margin-bottom: 100px;
+}
+fa-icon{
+    
+    color: rgba(218, 221, 224, 0.852);
+}
+h3{
+    color: white;
+    font-size: 1.5vw;
+    padding-bottom: 20px;
+}
+p{
+    color: #a4adbb;
+    font-size: 1vw;
+}
