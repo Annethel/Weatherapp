@@ -2,6 +2,8 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
 import { WeatherData } from '../models/weather.model';
 
 import { WeatherserService } from '../services/weatherser.service';
+import { WeatherService } from '../services/weather.service';
+import { WeatherapiData } from '../models/weatherapp-model';
 
 @Component({
   selector: 'app-madrid',
@@ -20,8 +22,8 @@ export class MadridComponent implements OnInit, OnChanges {
 
 
 
-  constructor(private weatherservice: WeatherserService) { }
-  weatherData?: WeatherData;
+ // constructor(private weatherservice: WeatherserService) { }
+  
   ngOnInit(): void {
 
 
@@ -30,9 +32,9 @@ export class MadridComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if ('item' in changes) {
 
-      this.weatherservice.getWeatherData(this.item).subscribe({
+      this.getweatherData.getWeather(this.item).subscribe({
         next: (value) => {
-          this.weatherData = value;
+          this.weatherapiData = value;
           console.log(value)
         },
       })
@@ -42,6 +44,9 @@ export class MadridComponent implements OnInit, OnChanges {
   percentOfRain = () => {
 
   }
+
+  weatherapiData?:WeatherapiData;
+  constructor(private getweatherData:WeatherService){}
 
 }
 
