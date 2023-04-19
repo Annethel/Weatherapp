@@ -2,6 +2,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { WeatherData } from '../models/weather.model';
 
 import { WeatherserService } from '../services/weatherser.service';
+import { WeatherService } from '../services/weather.service';
+import { WeatherapiData } from '../models/weatherapp-model';
 
 @Component({
   selector: 'app-searchbar',
@@ -10,12 +12,14 @@ import { WeatherserService } from '../services/weatherser.service';
 })
 export class SearchbarComponent implements OnInit {
 
-  constructor(private weatherservice: WeatherserService) { }
+  
+  constructor(private getweatherData:WeatherService){}
+
 
 
   @Output() newCityEvent = new EventEmitter<string>();
 
-  weatherData?: WeatherData;
+  weatherapiData?:WeatherapiData;
   cityName: string = '';
 
   ngOnInit(): void {
