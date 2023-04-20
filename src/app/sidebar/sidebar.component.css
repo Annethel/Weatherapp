@@ -1,5 +1,5 @@
 .sidebar{
-    width: 100px;
+    max-width: 100px;
     background-color: #192841;
     margin-top: 20px;
     border-radius: 20px;
@@ -8,7 +8,10 @@
     overflow-x: hidden; 
     padding-top: 20px;
     z-index: 1;
-    min-height: 763px;
+    
+    position: fixed;
+    max-height: fit-content;
+    margin-left: 10px;
     
 
 }
@@ -25,6 +28,8 @@ h3{
     color: white;
     font-size: 1.5vw;
     padding-bottom: 20px;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 p{
     color: #a4adbb;

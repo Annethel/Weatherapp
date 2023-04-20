@@ -1,12 +1,16 @@
 .search{
-    margin-top: 20px;
+   margin-top: 0px;
+   
+   
 }
 input{
     background-color: #192841;
-    width: 630px;
+    width: 678px;
+    
     height: 40px;
     border: 0;
     border-radius: 5px;
     padding-left: 10px;
     color: #dde3ed;
+    font-size: 1vw;
 }

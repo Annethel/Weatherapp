@@ -1,9 +1,6 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { WeatherData } from '../models/weather.model';
-
-import { WeatherserService } from '../services/weatherser.service';
-import { WeatherService } from '../services/weather.service';
 import { WeatherapiData } from '../models/weatherapp-model';
+import { WeatherService } from '../services/weather.service';
 
 @Component({
   selector: 'app-madrid',
@@ -12,41 +9,35 @@ import { WeatherapiData } from '../models/weatherapp-model';
 })
 export class MadridComponent implements OnInit, OnChanges {
 
-  @Input() item: string = "";
-  name: string = 'Madrid';
-  temp: number = 31;
-  percent: number = 0;
-  imgurl: string = "../../assets/images/sun.png"
-  imgurl1: string = "../../assets/images/suncloud.png"
-  imgurl2: string = "../../assets/images/raincloud.png"
+  @Input() queryCity: string = "";
 
 
+  data: WeatherapiData = {};
 
- // constructor(private weatherservice: WeatherserService) { }
-  
+
+  constructor(
+    private weatherService: WeatherService,
+  ) { }
+
+
+  // constructor(private weatherservice: WeatherserService) { }
+
   ngOnInit(): void {
 
-
+    this.displayCurrentWeather("Bamenda")
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if ('item' in changes) {
-
-      this.getweatherData.getWeather(this.item).subscribe({
-        next: (value) => {
-          this.weatherapiData = value;
-          console.log(value)
-        },
-      })
+    console.log(changes)
+    if ('queryCity' in changes && changes['queryCity'].currentValue) {
+      const city = changes['queryCity'].currentValue
+      this.displayCurrentWeather(city)
     }
   }
 
-  percentOfRain = () => {
-
+  private displayCurrentWeather = (city: string) => {
+    this.weatherService.getCurrent(city).subscribe(res => this.data = res)
   }
-
-  weatherapiData?:WeatherapiData;
-  constructor(private getweatherData:WeatherService){}
 
 }
 

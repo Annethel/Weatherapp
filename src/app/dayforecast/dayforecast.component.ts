@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
+import { WeatherapiData } from '../models/weatherapp-model';
+import { WeatherService } from '../services/weather.service';
 
 @Component({
   selector: 'app-dayforecast',
@@ -18,6 +20,37 @@ contentDetails:Array<Details> =[
   {day:'Sun', img:"../../assets/images/sun.png", word:"Sunny", date:"37/21"}
   
 ]
+
+@Input() newCity: string = "";
+
+
+  data: WeatherapiData = {};
+
+
+  constructor(
+    private weatherService: WeatherService,
+  ) { }
+
+
+  // constructor(private weatherservice: WeatherserService) { }
+
+  ngOnInit(): void {
+
+    this.displayCurrentWeather("Bamenda")
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes)
+    if ('newCity' in changes && changes['newCity'].currentValue) {
+      const city = changes['newCity'].currentValue
+      this.displayCurrentWeather(city)
+    }
+  }
+
+  private displayCurrentWeather = (city: string) => {
+    this.weatherService.getForecastDays(city).subscribe(res => this.data = res)
+  }
+
 }
 interface Details {
   id?:number;

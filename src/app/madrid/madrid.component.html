@@ -1,14 +1,13 @@
 
 <div class="all row">
     <div class="names col-md-2">
-       <h1>{{weatherapiData.}}</h1>
-       <p>Chance of rain: {{percent}}%</p>
-       <h2>{{weatherData?.currentConditions?.temp| number: '1.0-0'}}˚C</h2>
+       <div><h2>{{ data.location?.name ?? 'City Name' }} {{ data.location?.country ?? '' }}</h2></div>
+       <div>{{data.current?.last_updated|date:'medium'}}</div>
+       <div>{{ data.current?.temp_c ?? '0' }}˚C</div>
     </div>
+    
     <div class="img col-md-2">
-        <img [src]="imgurl" alt="sun" *ngIf="5<4">
-        <img [src]="weatherData?.currentConditions?.icon" alt="cloudy" *ngIf="1<4">
-        <img [src]="imgurl2" alt="rain" *ngIf="8<4">
+        <img [src]="data.current?.condition?.icon ?? ''" alt="icon">
     </div>
 </div>
 

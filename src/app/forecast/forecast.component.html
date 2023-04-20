@@ -1,10 +1,9 @@
 <div class="content row">
      <h2>{{tittle}}</h2>
      
-     <div class="details col-md-2" *ngFor="let item of contentDetails">
-        <p>{{item.time}}</p>
-        <img [src]= 'item.img' alt="Wheather img">
-        <h3>{{item.temp | number:'1.0-0'}}˚C</h3>
-
+     <div class="details col-md-2" *ngFor="let h of dataOfCurrentDay?.hour?.slice(6,12)">
+        <p>{{h.time | date: 'shortTime'}}</p>
+        <img [src]= 'h.condition.icon' alt="Wheather img">
+        <h3>{{h.temp_c| number:'1.0-0'}}˚C</h3> 
      </div>
 </div>

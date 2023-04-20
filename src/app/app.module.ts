@@ -13,9 +13,8 @@ import { ForecastComponent } from './forecast/forecast.component';
 import { MadridComponent } from './madrid/madrid.component';
 import { AirconditionComponent } from './aircondition/aircondition.component';
 import { DayforecastComponent } from './dayforecast/dayforecast.component';
-import { RouterModule, ROUTES } from '@angular/router';
-import { WeatherserService } from './services/weatherser.service';
 import { FormsModule } from '@angular/forms';
+import { WeatherService } from './services/weather.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +35,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule 
   ],
-  providers: [WeatherserService],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

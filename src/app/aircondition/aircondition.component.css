@@ -28,7 +28,7 @@ button{
 }
 .toflex{
     display: flex;
-    
+    justify-content: space-between;
     padding-left: 30px;
    
 }

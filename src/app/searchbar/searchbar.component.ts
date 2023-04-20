@@ -1,8 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { WeatherData } from '../models/weather.model';
 
-import { WeatherserService } from '../services/weatherser.service';
-import { WeatherService } from '../services/weather.service';
 import { WeatherapiData } from '../models/weatherapp-model';
 
 @Component({
@@ -13,7 +10,7 @@ import { WeatherapiData } from '../models/weatherapp-model';
 export class SearchbarComponent implements OnInit {
 
   
-  constructor(private getweatherData:WeatherService){}
+  constructor(){}
 
 
 

@@ -1,16 +1,18 @@
 <div class="container">
-    <app-sidebar></app-sidebar>
-    <div class="mfa">
-        <div class="search">
-            <app-searchbar (newCityEvent)="retrieveCityname($event)"></app-searchbar>
+    <div class="row">
+        <div class="col-md-2">
+            <app-sidebar></app-sidebar>
         </div>
-        <div class="mabar"><app-madrid [item]="cityName"></app-madrid></div>
-
-        <div class="fore"><app-forecast></app-forecast></div>
-        <div class="air"> <app-aircondition></app-aircondition></div>
-
+        <div class="all col-md-7">
+               <div><app-searchbar (newCityEvent)="retrieveCityname($event)"></app-searchbar></div> 
+               <div class="mabar"><app-madrid [queryCity]="cityName"></app-madrid></div>
+               <div class="fore"><app-forecast [item]="cityName"></app-forecast></div>
+               <div class="air"> <app-aircondition [newdata]="cityName"></app-aircondition></div>
+        </div>
+        <div class="last col-md-3">
+            <app-dayforecast [newCity]="cityName"></app-dayforecast>
+        </div>
+    
+        
     </div>
-
-    <app-dayforecast></app-dayforecast>
-
 </div>

@@ -1,7 +1,7 @@
 export interface WeatherapiData {
-    location: Location
-    current: Current
-    forecast: Forecast
+    location?: Location
+    current?: Current
+    forecast?: Forecast
   }
   
   export interface Location {

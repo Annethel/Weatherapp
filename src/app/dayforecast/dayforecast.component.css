@@ -29,3 +29,14 @@ h2{
     margin-right: 20px;
     
 }
+
+/*media querries*/
+@media only screen and (max-width: 950px){
+    .maindiv{
+        width: 100%;
+    }
+    .breeze{
+        width: 100%;
+        padding-top: 100px;
+    }
+}

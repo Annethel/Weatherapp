@@ -1,8 +1,21 @@
-.container{
-    display: flex;
-    justify-content: space-between;
+
+/*media querries*/
+@media only screen and (max-width: 950px){
+    .all{
+        width: 100%;
+    }
+    .last{
+        width: 100%;
+        padding-top: 100px;
+    }
 }
-.mabar{
-    margin-top: 20px;
-    margin-bottom: 10px;
+/*media querries*/
+@media only screen and (max-width: 950px){
+    .umbrella{
+        width: 100%;
+    }
+    .breeze{
+        width: 100%;
+        padding-top: 100px;
+    }
 }

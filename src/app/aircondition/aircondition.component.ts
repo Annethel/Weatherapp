@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 import { faDroplet, faSun, faTemperature0, faWind } from '@fortawesome/free-solid-svg-icons';
+import { WeatherapiData } from '../models/weatherapp-model';
+import { WeatherService } from '../services/weather.service';
 
 @Component({
   selector: 'app-aircondition',
@@ -14,18 +16,34 @@ export class AirconditionComponent {
     fontwind = faWind ;
     fontsun = faSun;
   
-    airInfo: Array<Write> = [
-      {id: 1, icon:this.fonttemp, word: "Real Feel", num:30},
-      {id: 1, icon:this.fontwind, word: "Wind", num:0.2},
-      {id: 2, icon:this.fontdrop, word: "Chance of rain", num:0}, 
-      {id: 1, icon:this.fontsun, word: "UV Index", num:3}
-    
-    ]
+    @Input() newdata: string = ""; 
 
-}
-interface Write{
-  id?:number
-  icon:any;
-  word:string;
-  num:number
+
+  data: WeatherapiData = {};
+
+
+  constructor(
+    private weatherService: WeatherService,
+  ) { }
+
+
+  // constructor(private weatherservice: WeatherserService) { }
+
+  ngOnInit(): void {
+
+    this.displayCurrentWeather("Bamenda")
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes)
+    if ('newdata' in changes && changes['newdata'].currentValue) {
+      const city = changes['newdata'].currentValue
+      this.displayCurrentWeather(city)
+    }
+  }
+
+  private displayCurrentWeather = (city: string) => {
+    this.weatherService.getCurrent(city).subscribe(res => this.data = res)
+  }
+
 }
