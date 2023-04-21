@@ -1,4 +1,6 @@
-
+.all{
+    margin-top: 20px;
+}
 /*media querries*/
 @media only screen and (max-width: 950px){
     .all{
@@ -6,13 +8,14 @@
     }
     .last{
         width: 100%;
-        padding-top: 100px;
+        padding-top: 20px;
     }
 }
 /*media querries*/
 @media only screen and (max-width: 950px){
     .umbrella{
         width: 100%;
+        margin-left: 10px;
     }
     .breeze{
         width: 100%;

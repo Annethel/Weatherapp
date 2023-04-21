@@ -23,3 +23,24 @@ img{
     font-size: 0.6vw;
     padding-bottom: 2vw;
 }
+.time{
+    width: 500px;
+    font-size: 1vw;
+    padding-bottom: 20px;
+    color: rgb(112, 113, 114);
+}
+.temp{
+    font-size: 1.5vw;
+    padding-bottom: 10px;
+    color: rgb(186, 187, 189);
+}
+/*media querries*/
+@media only screen and (max-width: 950px){
+    .all{
+        width: 100%;
+    }
+    .breeze{
+        width: 100%;
+        padding-top: 100px;
+    }
+}

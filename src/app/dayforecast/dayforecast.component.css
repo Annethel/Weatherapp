@@ -1,6 +1,6 @@
 .maindiv{
     background-color:#192841;
-    color: white;
+    color: rgb(189, 185, 185);
     min-width: 400px;
     border-radius: 20px;
     padding-top: 20px;
@@ -21,7 +21,7 @@ h2{
     font-size: 1vw;
 }
 .details {
-    border-bottom: 0.4px solid #ccd9ef;
+    border-bottom: 0.4px solid #7c7c7d;
     display: flex;
     justify-content: space-between;
     padding-top: 40px;

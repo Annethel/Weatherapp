@@ -1,10 +1,11 @@
 .air{
     background-color: #192841;
-    color: white;
+    color: rgb(209, 194, 194);
     max-width: 700px;
     max-height: 400px;
     border-radius: 20px;
     color: rgba(218, 221, 224, 0.852);
+    margin-left: -10px;
     
 }
 .condition{
@@ -22,28 +23,44 @@ button{
     background-color: #00a3ff;
     border: 0;
     color: white;
-    margin-left: 400px;
+    margin-left: 300px;
     
 
 }
-.toflex{
-    display: flex;
-    justify-content: space-between;
-    padding-left: 30px;
-   
-}
-.condition h3{
-    font-size: 1vw;
-    padding-left: 20px;
-}
-.toflex p{
-    padding-left: 20px;
-    color: rgba(218, 221, 224, 0.852);
-}
-.writings h3{
-     padding-left: 60px;
-     padding-bottom: 20px;
-    color: #f4f9fb;
-    font-size: 1vw;
 
+
+.condition h3{
+    font-size: 1.2vw;
+    padding-left: 20px;
+    width: 200px;
 }
+
+.item {
+    width: 100%;
+    
+  }
+  
+  .parent {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-top: 0;
+  }
+  
+  .parent > div {
+    flex: 50%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+    /*demo*/
+    
+    margin-bottom: 10px;
+   
+  }
+
+  .item p{
+    font-size: 1.5vw;
+    color: #cacece;
+  }
+  .item h3{
+    font-size: 1vw;
+    color: #eff1f1;
+  }
+  

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-1">
             <app-sidebar></app-sidebar>
         </div>
         <div class="all col-md-7">
@@ -9,10 +9,9 @@
                <div class="fore"><app-forecast [item]="cityName"></app-forecast></div>
                <div class="air"> <app-aircondition [newdata]="cityName"></app-aircondition></div>
         </div>
-        <div class="last col-md-3">
+        <div class="last col-md-4">
             <app-dayforecast [newCity]="cityName"></app-dayforecast>
         </div>
-    
         
     </div>
 </div>

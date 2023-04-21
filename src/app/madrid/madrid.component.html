@@ -2,8 +2,8 @@
 <div class="all row">
     <div class="names col-md-2">
        <div><h2>{{ data.location?.name ?? 'City Name' }} {{ data.location?.country ?? '' }}</h2></div>
-       <div>{{data.current?.last_updated|date:'medium'}}</div>
-       <div>{{ data.current?.temp_c ?? '0' }}˚C</div>
+       <div class="time">{{data.current?.last_updated|date:'medium'}}</div>
+       <div class="temp">{{ data.current?.temp_c ?? '0' }}˚C</div>
     </div>
     
     <div class="img col-md-2">

@@ -1,53 +1,45 @@
-<div class="air">
+<div class="air container">
     <div class="condition">
         <h3>AIR CONDITIONS</h3>
         <button>See More</button>
     </div>
-    <div class=" writings">
-        <div class="container"></div>
-        <div class=" toflex col-md-6">
+   
+        <div class=" parent">
+        
 
-            <div>
-                <div>  <fa-icon [icon]="fonttemp"></fa-icon>
-                    <p>Real Feel</p></div>
+            <div class="item">
+               <fa-icon [icon]="fonttemp"></fa-icon>
+                    <p>Real Feel</p>
               
                 <h3>{{data.current?.feelslike_c| number:'1.0-0'}}˚C</h3>
             </div>
-                <div>
-                    <div >  <fa-icon [icon]="fontwind"></fa-icon>
-                        <p>Wind</p></div>
+                <div class="item">
+                    <fa-icon [icon]="fontwind"></fa-icon><p>Wind</p>
+                        
                   
                     <h3>{{data.current?.wind_mph | number:'1.0-0'}}mph</h3>
                 </div>
-            
-        </div>
-            
-
-        <div class=" toflex col-md-6">
+        
     
-            <div>
-                <div>  <fa-icon [icon]="fontdrop"></fa-icon>
-                    <p>Chance of rain</p></div>
+            <div class="item">
+                 <fa-icon [icon]="fontdrop"></fa-icon>
+                    <p>Chance of rain</p>
               
                 <h3>{{data.current?.precip_in}}%</h3>
             </div>
 
-        
     
-            <div>
-                <div >  <fa-icon [icon]="fontsun"></fa-icon>
-                    <p>UV index</p></div>
+            <div class="item">
+                <fa-icon [icon]="fontsun"></fa-icon>
+                    <p>UV index</p>
               
                 <h3>{{data.current?.uv}}mW/m2 </h3>
             </div>
             
         
-    
+        </div>
 
         
        
-        
-
-
-    </div>
+    
 </div>
