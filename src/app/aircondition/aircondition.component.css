@@ -18,12 +18,13 @@
 }
 button{
     width: 120px;
-    height: 40px;
+    max-height: 40px;
     border-radius: 25px;
     background-color: #00a3ff;
     border: 0;
     color: white;
     margin-left: 300px;
+    font-size: 1vw;
     
 
 }
@@ -37,6 +38,7 @@ button{
 
 .item {
     width: 100%;
+    line-height: 0;
     
   }
   
@@ -56,11 +58,15 @@ button{
   }
 
   .item p{
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     color: #cacece;
+    padding-left: 30px;
+    
   }
   .item h3{
     font-size: 1vw;
     color: #eff1f1;
+    padding-left: 50px;
+    padding-top: 10px;
   }
   

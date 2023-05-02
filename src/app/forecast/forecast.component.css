@@ -1,7 +1,7 @@
 .content{
     background-color: #192841;
     max-width: 700px;
-    max-height: 400px;
+    max-height: 1000px;
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
@@ -40,9 +40,11 @@ padding-right: 10px;
         width: 100%;
     }
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 750px){
     .details{
         width: 100%;
         column-width: 100%;
+        border-right: 0;
+        border-bottom: 0.4px solid rgba(141, 144, 145, 0.852);
     }
 }

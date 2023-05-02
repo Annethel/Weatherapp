@@ -14,3 +14,12 @@ input{
     color: #dde3ed;
     font-size: 1vw;
 }
+@media only screen and (max-width: 950px){
+    input{
+        width: 100%;
+    }
+    .breeze{
+        width: 100%;
+        padding-top: 100px;
+    }
+}
